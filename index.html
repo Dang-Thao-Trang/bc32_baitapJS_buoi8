@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="form-group w-50 m-auto">
+      <div class="alert alert-danger mt-5">
+        Đề bài: Cho người dùng nhập vào các số nguyên. Và lưu trữ dưới dạng mảng
+      </div>
+      <input
+        id="userInput"
+        class="form-control mt-5"
+        placeholder="nhập vào đây 1 số"
+        type="number"
+        autocomplete="of"
+      />
+      <button onclick="clickInput()" class="btn btn-warning my-3">
+        Thêm số
+      </button>
+      <div id="int" class="alert alert-success">Hiển thị:</div>
+    </div>
+    <hr />
+
+    <div class="form-group w-50 m-auto">
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo1"
+        >
+          <p>Bài 1: tổng các số dương trong mảng</p>
+        </button>
+        <div id="demo1" class="collapse">
+          <button onclick="bai1()" class="btn btn-dark my-2">Enter</button>
+          <div id="int1" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 2 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo2"
+        >
+          Bài 2: Đếm có bao nhiêu số dương trong mảng.
+        </button>
+        <div id="demo2" class="collapse">
+          <button onclick="bai2()" class="btn btn-dark my-2">Enter</button>
+          <div id="int2" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 3 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo3"
+        >
+          Bài 3: tìm số nhỏ nhất
+        </button>
+        <div id="demo3" class="collapse">
+          <button onclick="bai3()" class="btn btn-dark my-2">Enter</button>
+          <div id="int3" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+      <!-- bài 4 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo4"
+        >
+          Bài 4 tìm số dương nhỏ nhất
+        </button>
+        <div id="demo4" class="collapse">
+          <button onclick="bai4()" class="btn btn-dark my-2">Enter</button>
+          <div id="int4" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 5 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo5"
+        >
+          Bài 5: tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị
+          chẵn thì trả về -1.
+        </button>
+        <div id="demo5" class="collapse">
+          <button onclick="bai5()" class="btn btn-dark my-2">Enter</button>
+          <div id="int5" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 6 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo6"
+        >
+          Bài 6: đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí
+          muốn đổi chỗ giá trị).
+        </button>
+        <div id="demo6" class="collapse">
+          <label>Nhập vào 2 vị trí trong mảng cần đổi</label>
+          <div class="row mb-2">
+            <input
+              id="index1"
+              type="number"
+              class="form-control col-5 mx-4"
+              placeholder="vị trí 1"
+            />
+            <input
+              id="index2"
+              type="number"
+              class="form-control col-5 mx-2"
+              placeholder="vị trí 2"
+            />
+          </div>
+          <button onclick="bai6()" class="btn btn-dark my-2">Enter</button>
+          <div id="int6" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 7 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo7"
+        >
+          Bài 7: sắp xếp mảng theo thứ tự tăng dần.
+        </button>
+        <div id="demo7" class="collapse">
+          <button onclick="bai7()" class="btn btn-dark my-2">Enter</button>
+          <div id="int7" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 8 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo8"
+        >
+          Bài 8: tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số
+          nguyên tố thì trả về – 1.
+        </button>
+        <div id="demo8" class="collapse">
+          <button onclick="bai8()" class="btn btn-dark my-2">Enter</button>
+          <div id="int8" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 9 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo9"
+        >
+          Bài 9: nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số
+          nguyên?
+        </button>
+        <div id="demo9" class="collapse">
+          <input
+            type="number"
+            class="form-control"
+            id="num9"
+            placeholder="Nhập số"
+          />
+          <button class="btn btn-success my-2" onclick="addNumber9()">
+            Thêm số
+          </button>
+          <div id="add9" class="alert alert-success"></div>
+          <button onclick="bai9()" class="btn btn-dark my-2">Enter</button>
+          <div id="int9" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- bài 10 -->
+
+      <div class="form-group">
+        <button
+          type="alert"
+          class="alert alert-primary w-100 text-left"
+          data-toggle="collapse"
+          data-target="#demo10"
+        >
+          Bài 10: so sánh số lượng số dương và số lượng số âm xem số nào nhiều
+          hơn.
+        </button>
+        <div id="demo10" class="collapse">
+          <button onclick="bai10()" class="btn btn-dark my-2">Enter</button>
+          <div id="int10" class="alert alert-success"></div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
